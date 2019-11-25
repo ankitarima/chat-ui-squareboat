@@ -1,0 +1,87 @@
+<mat-toolbar class="p-0 mat-elevation-z1">
+
+    <div fxFlex fxFill fxLayout="row" fxLayoutAlign="start center">
+
+        <div fxFlex="1 0 auto" fxLayout="row" fxLayoutAlign="start center">
+            <div class="p-16">
+                iTalk
+            </div>
+        </div>
+
+        <mat-tab-group fxFlex="1 0 auto" style="margin-bottom: -20px;" fxLayout="row" fxLayoutAlign="center center">
+            <mat-tab label="Group">
+                <ng-template mat-tab-label>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                        <mat-icon>group</mat-icon>
+                        <span>Groups</span>
+                    </div>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Messages">
+                <ng-template mat-tab-label>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                        <mat-icon>message
+                        </mat-icon>
+                        <span>Messages</span>
+                    </div>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Video Call">
+                <ng-template mat-tab-label>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                        <mat-icon>videocam
+                        </mat-icon>
+                        <span>Video Calls</span>
+                    </div>
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+
+        <div class="" fxFlex="0 1 auto" fxLayout="row" fxLayoutAlign="start center">
+
+            <button mat-button class="user-button">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <mat-icon fxHide.xs>help</mat-icon>
+                </div>
+            </button>
+
+            <button mat-button class="user-button">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <mat-icon fxHide.xs>notifications</mat-icon>
+                </div>
+            </button>
+
+            <button mat-button [matMenuTriggerFor]="userMenu" class="user-button">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="avatar mr-0 mr-sm-16" src="assets/images/avatars/Velazquez.jpg">
+                    <span class="username mr-12" fxHide fxShow.gt-sm>Charlie Adams</span>
+                    <mat-icon class="s-16" fxHide.xs>keyboard_arrow_down</mat-icon>
+                </div>
+            </button>
+
+            <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+
+                <button mat-menu-item>
+                    <mat-icon>account_circle</mat-icon>
+                    <span>My Profile</span>
+                </button>
+
+                <button mat-menu-item class="">
+                    <mat-icon>mail</mat-icon>
+                    <span>Inbox</span>
+                </button>
+
+                <button mat-menu-item class="">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Logout</span>
+                </button>
+
+            </mat-menu>
+
+
+
+        </div>
+
+    </div>
+
+</mat-toolbar>

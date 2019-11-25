@@ -1,0 +1,108 @@
+<div class="page-layout simple left-sidebar inner-sidebar inner-scroll">
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- SIDEBAR -->
+        <fuse-sidebar class="sidebar" name="simple-left-sidebar-4" position="left" lockedOpen="gt-md">
+
+            <!-- SIDEBAR CONTENT -->
+            <div class="content p-24" fusePerfectScrollbar>
+
+                <div style="text-align: center;">
+                    <img class="profile-image avatar huge" src="assets/images/avatars/Velazquez.jpg">
+                </div>
+                <div class="h1" style="text-align: center;"> Robin Wang </div>
+                <div style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                <div style="text-align: center;">
+                    <mat-list>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>message</mat-icon>
+                            <h4 mat-line>Messages</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+
+                            <h4 mat-line>chat</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <h4 mat-line>Send Message</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>group</mat-icon>
+                            <h4 mat-line>Groups</h4>
+                        </mat-list-item>
+
+                        <mat-list-item>
+
+                            <h4 mat-line>History</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <h4 mat-line>Create Group</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>videocam</mat-icon>
+                            <h4 mat-line>Video Calls</h4>
+                        </mat-list-item>
+
+                        <mat-list-item>
+
+                            <h4 mat-line>History</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <h4 mat-line>calls</h4>
+                        </mat-list-item>
+                    </mat-list>
+                </div>
+
+
+            </div>
+            <!-- / SIDEBAR CONTENT -->
+
+        </fuse-sidebar>
+        <!-- / SIDEBAR -->
+
+        <!-- CENTER -->
+        <div id="chat" class="page-layout center carded fullwidth inner-scroll">
+
+            <!-- CENTER -->
+            <div class="center">
+
+                <!-- CONTENT CARD -->
+                <div class="content-card">
+
+                    <mat-sidenav-container>
+
+                        <!-- LEFT SIDENAV -->
+                        <mat-sidenav class="sidenav" position="start" opened="true" mode="side"
+                            fuseMatSidenavHelper="chat-left-sidenav" matIsLockedOpen="gt-md">
+                            <chat-left-sidenav></chat-left-sidenav>
+                        </mat-sidenav>
+                        <!-- / LEFT SIDENAV -->
+
+                        <!-- CONTENT -->
+                        <chat-start *ngIf="!selectedChat"></chat-start>
+
+                        <chat-view *ngIf="selectedChat"></chat-view>
+                        <!-- / CONTENT -->
+
+                        <!-- RIGHT SIDENAV -->
+                        <mat-sidenav class="sidenav" position="end" opened="false" mode="over"
+                            fuseMatSidenavHelper="chat-right-sidenav">
+                            <chat-right-sidenav></chat-right-sidenav>
+                        </mat-sidenav>
+                        <!-- / RIGHT SIDENAV -->
+
+                    </mat-sidenav-container>
+
+                </div>
+                <!-- / CONTENT CARD -->
+
+            </div>
+            <!-- / CENTER -->
+
+        </div>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>
